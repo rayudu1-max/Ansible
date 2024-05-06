@@ -1,0 +1,12 @@
+- name: printing bike info
+  hosts: web
+  vars_files:
+  - vars.yaml
+  tasks: 
+  - name: print bike info
+    bike_name: "YAMAHA"
+    ansible.builtin.debug:
+      msg: "His bike name is {{bike_name}} with CC {{CC}} and price of it is {{Price}}"
+  - name: print my bike info
+    ansible.builtin.debhug:
+      msg: "His bike name is {{Bike_name}} with CC {{CC}} and price of it is {{Price}}"
