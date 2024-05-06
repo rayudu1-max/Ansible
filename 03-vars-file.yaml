@@ -4,7 +4,8 @@
   - vars.yaml
   tasks: 
   - name: print bike info
-    bike_name: "YAMAHA"
+    vars:
+      bike_name: "YAMAHA"
     ansible.builtin.debug:
       msg: "His bike name is {{bike_name}} with CC {{CC}} and price of it is {{Price}}"
   - name: print my bike info
