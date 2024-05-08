@@ -8,6 +8,6 @@
     ignore_errors: true
   - name: Create USER
     ansible.builtin.command: useradd {{USER}}
-    when: rc != 0
+    when: USER.rc != 0
       
 
