@@ -10,7 +10,7 @@
     ansible.builtin.debug:
       msg: "user info: {{USER}}"
   - name: Create User
-    ansible.builtin.command: useradd {{USER}}
+    ansible.builtin.command: useradd rayudu
     when: USER.rc != 0
       
 
