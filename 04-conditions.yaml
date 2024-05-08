@@ -1,0 +1,7 @@
+- name: conditions
+  hosts: web
+  become: yes
+  tasks: 
+  - name: checking user present or not
+    ansible.builtin.command: id rayudu
+    
