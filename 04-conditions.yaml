@@ -6,7 +6,10 @@
     ansible.builtin.command: id rayudu
     register: USER
     ignore_errors: true
-  - name: Create USER
+  - name: print user information
+    ansible.builtin.debug:
+      msg: "user info: {{USER}}"
+  - name: Create User
     ansible.builtin.command: useradd {{USER}}
     when: USER.rc != 0
       
